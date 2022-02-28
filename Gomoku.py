@@ -15,11 +15,10 @@ class Gomoku:
     def run(self) -> None:
         while (True):
             try:
-                _input = input()
-                _input = _input.strip().replace('\\r', '').replace('\\n', '')
+                _input = input().strip()
                 if _input != "":
-                    ret = command(self._board, _input.split(), self._error_cmd, self._info)
-                    if ret == 1:
+                    command(self._board, _input.split(), self._error_cmd, self._info)
+                    if _input == "END":
                         break
             except EOFError:
                 break

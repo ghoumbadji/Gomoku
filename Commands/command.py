@@ -74,8 +74,7 @@ def board_cmd(board: Board, params: list, error_cmd: ErrorCommand, info: Info) -
     else:
         while True:
             try:
-                _input = input()
-                _input = _input.strip().replace('\\r', '').replace('\\n', '')
+                _input = input().strip()
                 if _input == "":
                     continue
                 elif _input == "DONE":
@@ -151,9 +150,5 @@ def command(board: Board, args: list, error_cmd: ErrorCommand, info: Info) -> No
     if args[0] not in command_map.keys():
         if args[0] != "":
             error_cmd.unknown(f"{args[0]}")
-            return (-1)
     else:
         command_map[args[0]](board, args[1:], error_cmd, info)
-        if args[0] == "END" and len(args) == 1:
-            return (1)
-        return (0)
