@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 from Board import Board
-from Commands.command import command
-from Commands.ErrorCommand import ErrorCommand
+from command import command, ErrorCommand
 from Info import Info
 
 class Gomoku:
