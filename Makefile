@@ -6,10 +6,9 @@
 ##
 
 SRC	=	Board.py	\
-		Commands/ErrorCommand.py	\
-		Commands/command.py	\
+		command.py	\
 		Info.py	\
-		AI/AI.py	\
+		AI.py	\
 		Gomoku.py
 
 NAME	=	pbrain-gomoku-ai

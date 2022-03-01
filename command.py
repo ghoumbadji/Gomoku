@@ -162,12 +162,8 @@ def command(board: Board, args: list, error_cmd: ErrorCommand, info: Info) -> No
         "TURN": turn,
         "BEGIN": begin,
         "BOARD": board_cmd,
-        "INFO": info_cmd,
         "ABOUT": about,
         "END": end,
     }
-    if args[0] not in command_map.keys():
-        if args[0] != "":
-            error_cmd.unknown(f"{args[0]}")
-    else:
+    if args[0] in command_map.keys():
         command_map[args[0]](board, args[1:], error_cmd, info)
